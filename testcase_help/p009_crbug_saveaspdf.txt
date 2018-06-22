@@ -1,0 +1,178 @@
+bugid:1875
+bug title：powerbuilder 2017 exe exiting Urgent Support needed                                       
+重现步骤：
+runtime 环境下
+1.运行案例， 导出pdf文件到任意位置，会导致PB 崩溃。
+2.生成的pdf文件为0字节。
+问题原因：
+
+bugid:1870
+bug title：NativePDF, Text is displayed in the header of a report where none should be
+重现步骤：
+1.导出nativepdf方式的pdf文件。
+2.对比datawindow窗口上的显示内容，多了一块红色文字重复显示。
+问题原因：
+
+bugid:1864/1865
+bug title：Rendering 'PDF' on OLE Database Blob control gives error on retrieve.
+重现步骤：
+问题重现步骤比较麻烦，具体请参考bugtrack的说明
+问题原因：
+
+bugid:1834
+bug title：Font altered when saving rich text (from rte) as PDF
+重现步骤：
+1.执行测试点，点击exe保存出PDF文件
+2.第二行字母的样式，和导出后的pdf的文字的样式，有明显不同（主要是字体类型变了）
+问题原因：
+
+bugid:1825
+bug title：the number being cutoff  with NativePDF
+重现步骤：
+1.选中参数，点击exe,检索出数据
+2.选择不同的redio button 并点exe，会在目录下，产生4个不同的pdf文件
+3 .对比这些导出的pdf文件，可以发现nativepdf方式产生的pdf文件的字体会稍微大一点，粗一点。
+尤其在第三行数据中，111.33 显示不完整，后面的3有截掉一半。
+问题原因：
+
+bugid:1779
+bug title：NativePDF feature issues its own error dialog
+重现步骤：
+     1. 在Windows 10中运行案例.
+     2. 先确认C盘没有test目录.
+     3. 执行案例中的1779Save按钮. 会弹出一个内部错误. 继续测试:
+     4.手动创建C:\Test 目录, 然后执行一次1779Save功能, 此时会成功生成PDF.
+     5. 打开C:\Test目录中刚生成的那个PDF文件,不要关闭PDF文件(即占用这个文件),  然后再次执行SavePDF功能. 也会弹出一个内部错误.
+问题原因：
+
+bugid:1767
+bug title：RichTextEdit (RTE) Datawindow SaveAs PDF issue
+重现步骤：
+1.选中参数1767，点击exe执行
+2.点击窗口1767paste按钮，加入内容
+3.点击savepdf按钮，保存为PDF文件，查看文件是否重复
+问题原因：
+
+bugid:1716
+bug title：(NativePDF)  Powerbuilder 2017 PDF issues
+重现步骤：
+1.选中参数1716后，点击exe
+2.选择C盘下的路径，生成不了PDF文件
+问题原因：
+
+bugid:1715
+bug title：the crash phenomenon of saveas pdf
+重现步骤：
+1.选中参数1715后，点击exe
+2.保存pdf成功以后，打开查看pdf文件，关闭，然后再保存，很大概率崩溃
+问题原因：
+
+bugid:1692
+bug title：it failes to create the EMF file when filename does not  include extension  in saveas pdf
+重现步骤：
+1.选中参数1692后，点击exe
+2.保存pdf时会提示“创建EMF 文件失败，请确保有写EMF文件的权利'
+问题原因：
+
+bugid:1672
+bug title： NativePDF is omitting Printer Fonts or the mapping is totally wrong
+重现步骤：
+在执行案例前，先安装打印机驱动，保证系统有安装相关字库才行。
+该字库来源于打印机驱动 EPSON FX-890，
+1.执行exe文件后，选中参数1672，点击exe 导出nativepdf文档
+2.保存出来的字体有问题
+问题原因：
+
+bugid:1645
+bug title：(Nativepdf) Pdf and hebrew text
+重现步骤：
+1.选中参数1645后，点击exe
+2.保存pdf，查看PDF，hebrew 文字本来是从右边开始读取的，但是我们的反了
+问题原因：
+
+bugid:1625 
+bug title：Save As PDF and AutoSize Height Column
+重现步骤：
+1.选中参数1625后，点击exe
+2.保存pdf对比导出的文件内容，
+发现nativepdf方法导出的pdf文件对于需要截断的column的内容显示的，直接显示在column的列框外面了
+问题原因：
+
+bugid:1616
+bug title：NativePDF fails because it cannot write dwpage.emf file
+重现步骤：
+把案例生成为exe
+PB 生成的exe文件放在C:\Program Files (x86)\applicationfolder文件夹下，产生nativepdf失败
+问题原因：原因是nativepdf 要生成dwpage.emf文件失败。用户没有这个当前文件夹的创建文件的权限。
+
+bugid:1592
+bug title：NativePDF creates invalid PDF file from complex datawindow
+重现步骤：
+1.选中参数1592，点击exe
+2.查看保存出的pdf文件，确认是否能打开
+问题原因：messagebox提示当前导出文件成功，但是文件打不开的， 才1K 大小，明显是生成文件有问题。
+但是其他文件没有类似问题， 主要是他的在pdf有横向数据显示而且格式稍微有点复杂
+
+bugid:1578
+bug title：there is bitmap quality issue with new NativePDF! Export
+重现步骤：
+1.选中参数1578，点击exe
+2.查看保存出来的PDF文件，检查位图是否清晰
+As You can see in attachments the quality of bitmap with sign is very very low in new version.
+Is there any possibility to increase of bitmap render quality in export ?
+问题原因：
+
+bugid:1562
+bug title：nativePDF! QR code included as bitmap are unreadable
+重现步骤：
+1.选中参数1562，点击exe
+2.查看保存出来的PDF，确认nativepdf打印文件的二维码是否能扫描出来
+问题原因：
+
+bugid:1542
+bug title：NativePDF omitting bold font.
+重现步骤：
+1.选中参数1542，点击exe
+2.打开PDF文件，查看文件----》属性------》font tab属性， 发现应该显示多个字体属性节点，却只显示一个属性节点
+问题原因：
+
+bugid:1524
+bug title：Dynamic Loaded Fonts missing in generated PDF using the NativePDF method.
+重现步骤：
+1.选中参数1524，点击exe
+2.查看PDF文件，确认是否生成条码内容
+问题原因：
+
+bugid:1523
+bug title：NativePDF CustomSize default(0) means A4, but it should be the datawindow papersize.
+重现步骤：
+1.选中参数1523，
+2.
+问题原因：
+
+bugid:1519
+bug title：Native PDF prints label outline in PDF for label DWs, and is also changing page size.
+重现步骤：
+1.选中参数1519，点击exe
+2.查看pdf文件，确认label类型的dw，打印或者导出文档的时候是否显示窗口上面的设计边框（正常不显示）
+问题原因：
+
+bugid:1504
+bug title：Dw save as PDF using NativePDF method.
+重现步骤：
+1.选中参数1504，retrieve出数据，在dw中输入任意相关数据后，点击savepdf进行保存
+2查看PDF，确认dw上有的嵌入图片，是否打印出来
+问题原因：
+
+bugid:1126
+bug title：crosstab datawindows save as pdf have problem with drawing lines
+重现步骤：
+1.选中参数1126，点击exe
+2.保存为pdf后，较大单元格与较小单元格连接处画线有轻微的超出范围
+问题原因：
+
+模板：
+bugid:
+bug title：
+重现步骤：
+问题原因：

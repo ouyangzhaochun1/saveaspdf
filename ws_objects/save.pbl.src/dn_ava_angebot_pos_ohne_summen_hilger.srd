@@ -1,0 +1,662 @@
+﻿$PBExportHeader$dn_ava_angebot_pos_ohne_summen_hilger.srd
+$PBExportComments$Nested für das Angebotsformular mit Positionen und Einzelpreisen
+release 17;
+datawindow(units=3 timer_interval=0 color=134217742 brushmode=0 transparency=0 gradient.angle=0 gradient.color=8421504 gradient.focus=0 gradient.repetition.count=0 gradient.repetition.length=100 gradient.repetition.mode=0 gradient.scale=100 gradient.spread=100 gradient.transparency=0 picture.blur=0 picture.clip.bottom=0 picture.clip.left=0 picture.clip.right=0 picture.clip.top=0 picture.mode=0 picture.scale.x=100 picture.scale.y=100 picture.transparency=0 processing=0 HTMLDW=no print.printername="" print.documentname="" print.orientation = 0 print.margin.left = 635 print.margin.right = 635 print.margin.top = 635 print.margin.bottom = 635 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.buttons=no print.preview.buttons=no print.cliptext=no print.overrideprintjob=no print.collate=yes print.background=no print.preview.background=no print.preview.outline=yes hidegrayline=no showbackcoloronxp=no picture.file="" )
+header(height=555 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+summary(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+footer(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" )
+detail(height=0 color="536870912" transparency="0" gradient.color="8421504" gradient.transparency="0" gradient.angle="0" brushmode="0" gradient.repetition.mode="0" gradient.repetition.count="0" gradient.repetition.length="100" gradient.focus="0" gradient.scale="100" gradient.spread="100" height.autosize=yes )
+table(column=(type=long updatewhereclause=yes name=angebot_angebot dbname="angebot.angebot" )
+ column=(type=char(20) updatewhereclause=yes name=angebot_nummer dbname="angebot.nummer" )
+ column=(type=long updatewhereclause=yes name=angebot_leistungsort dbname="angebot.leistungsort" )
+ column=(type=long updatewhereclause=yes name=angebot_ansprechpartner dbname="angebot.ansprechpartner" )
+ column=(type=datetime updatewhereclause=yes name=angebot_anfrage_datum dbname="angebot.anfrage_datum" )
+ column=(type=char(20) updatewhereclause=yes name=angebot_anfrage_nr dbname="angebot.anfrage_nr" )
+ column=(type=datetime updatewhereclause=yes name=angebot_druck_datum dbname="angebot.druck_datum" )
+ column=(type=long updatewhereclause=yes name=angebot_en_objekt dbname="angebot.en_objekt" )
+ column=(type=long updatewhereclause=yes name=angebot_en_bereich dbname="angebot.en_bereich" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_angebot_pos dbname="angebot_pos.angebot_pos" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_einheit dbname="angebot_pos.einheit" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_typ dbname="angebot_pos.typ" )
+ column=(type=decimal(4) updatewhereclause=yes name=angebot_pos_menge dbname="angebot_pos.menge" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_pos_angebot_preis dbname="angebot_pos.angebot_preis" )
+ column=(type=char(20) updatewhereclause=yes name=angebot_pos_nummer dbname="angebot_pos.nummer" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_option_alternativ dbname="angebot_pos.option_alternativ" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_pos_mwst_prozent dbname="angebot_pos.mwst_prozent" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_verbund_pos dbname="angebot_pos.verbund_pos" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_verbund_kz dbname="angebot_pos.verbund_kz" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_einheit_alternativ dbname="angebot_pos.einheit_alternativ" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_bild_drucken dbname="angebot_pos.bild_drucken" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_postext_ueberschr dbname="angebot_pos.postext_ueberschr" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_postext_angebot dbname="angebot_pos.postext_angebot" )
+ column=(type=char(254) updatewhereclause=yes name=leistungsort_name dbname="leistungsort.name" )
+ column=(type=char(50) updatewhereclause=yes name=mandant_name dbname="betrieb.name" )
+ column=(type=char(50) updatewhereclause=yes name=mandant_name2 dbname="betrieb.name2" )
+ column=(type=char(50) updatewhereclause=yes name=mandant_strasse dbname="adresse.strasse" )
+ column=(type=char(10) updatewhereclause=yes name=mandant_hausnummer dbname="adresse.hausnummer" )
+ column=(type=char(9) updatewhereclause=yes name=mandant_plz dbname="adresse.plz" )
+ column=(type=char(50) updatewhereclause=yes name=mandant_ort dbname="ort.bezeichnung" )
+ column=(type=long updatewhereclause=yes name=kunde_id dbname="betrieb.betrieb" )
+ column=(type=char(20) updatewhereclause=yes name=kunde_nummer dbname="betrieb.nummer" )
+ column=(type=char(20) updatewhereclause=yes name=en_tankschutz_nummer dbname="en_tankschutz.nummer" )
+ column=(type=char(40) updatewhereclause=yes name=sachbearbeiter_anrede dbname="sachbearbeiter_anrede" )
+ column=(type=char(50) updatewhereclause=yes name=sachbearbeiter_nachname dbname="sachbearbeiter_nachname" )
+ column=(type=char(40) updatewhereclause=yes name=sachbearbeiter_vorname dbname="sachbearbeiter_vorname" )
+ column=(type=char(100) updatewhereclause=yes name=telefon dbname="telefon" )
+ column=(type=char(100) updatewhereclause=yes name=fax dbname="fax" )
+ column=(type=char(50) updatewhereclause=yes name=kunde_name dbname="betrieb.name" )
+ column=(type=char(50) updatewhereclause=yes name=kunde_name2 dbname="betrieb.name2" )
+ column=(type=char(9) updatewhereclause=yes name=leistungsort_plz dbname="adresse.plz" )
+ column=(type=char(10) updatewhereclause=yes name=leistungsort_hausnummer dbname="adresse.hausnummer" )
+ column=(type=char(50) updatewhereclause=yes name=leistungsort_strasse dbname="adresse.strasse" )
+ column=(type=char(50) updatewhereclause=yes name=leistungsort_ort dbname="ort.bezeichnung" )
+ column=(type=char(40) updatewhereclause=yes name=leistungsort_ortsteil dbname="ortsteil.bezeichnung" )
+ column=(type=char(500) updatewhereclause=yes name=beschreibung dbname="beschreibung" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_kopftext_p dbname="angebot.kopftext_p" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_fusstext_p dbname="angebot.fusstext_p" )
+ column=(type=char(10) updatewhereclause=yes name=kuerzel dbname="kuerzel" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_pauschal_pos dbname="angebot_pos.pauschal_pos" )
+ column=(type=decimal(2) updatewhereclause=yes name=angebot_pos_rabatt dbname="angebot_pos.rabatt" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_preis dbname="angebot_pos.preis" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_pos_rabatt_betrag dbname="angebot_pos.rabatt_betrag" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_pos_positionstext dbname="angebot_pos.positionstext" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_lfd_nr_ebene dbname="angebot_pos.lfd_nr_ebene" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_pos_positionstext_rtf dbname="angebot_pos.positionstext_rtf" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_kopftext dbname="angebot.kopftext" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_fusstext dbname="angebot.fusstext" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_kopftext_rtf dbname="angebot.kopftext_rtf" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_fusstext_rtf dbname="angebot.fusstext_rtf" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_titel dbname="angebot.titel" )
+ column=(type=char(32766) updatewhereclause=no name=angebot_titel_rtf dbname="angebot.titel_rtf" )
+ column=(type=char(32766) updatewhereclause=no name=infotext dbname="infotext" )
+ column=(type=char(32766) updatewhereclause=no name=infotext_rtf dbname="infotext_rtf" )
+ column=(type=char(1) updatewhereclause=yes name=angebot_pos_infotext_drucken dbname="angebot_pos.infotext_drucken" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_gesamtpreis dbname="angebot.gesamtpreis" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_mwst_betrag1 dbname="angebot.mwst_betrag1" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_mwst_betrag2 dbname="angebot.mwst_betrag2" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_mwst_betrag3 dbname="angebot.mwst_betrag3" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_mwst_betrag4 dbname="angebot.mwst_betrag4" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_mwst_betrag5 dbname="angebot.mwst_betrag5" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_mwst_prozent1 dbname="angebot.mwst_prozent1" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_mwst_prozent2 dbname="angebot.mwst_prozent2" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_mwst_prozent3 dbname="angebot.mwst_prozent3" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_mwst_prozent4 dbname="angebot.mwst_prozent4" )
+ column=(type=decimal(1) updatewhereclause=yes name=angebot_mwst_prozent5 dbname="angebot.mwst_prozent5" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_netto_betrag dbname="angebot.netto_betrag" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_brutto_betrag dbname="angebot.brutto_betrag" )
+ column=(type=decimal(3) updatewhereclause=yes name=angebot_rabatt_betrag dbname="angebot.rabatt_betrag" )
+ column=(type=long updatewhereclause=yes name=angebot_waehrung dbname="angebot.waehrung" )
+ column=(type=long updatewhereclause=yes name=angebot_pos_leistung dbname="angebot_pos.leistung" )
+ column=(type=char(254) updatewhereclause=yes name=b_image dbname="b_image_1" )
+ column=(type=char(255) updatewhereclause=yes name=bild_name dbname="bild_name" )
+ column=(type=char(9) updatewhereclause=yes name=adresse_pplz_mandant dbname="adresse.pplz" )
+ column=(type=char(10) updatewhereclause=yes name=adresse_postfach_mandant dbname="adresse.postfach" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"adresse~" ALIAS=~"adresse_a~" )  TABLE(NAME=~"angebot~" )  TABLE(NAME=~"angebot_pos~" )  TABLE(NAME=~"betrieb~" ALIAS=~"betrieb_a~" )  TABLE(NAME=~"leistungsort~" )  TABLE(NAME=~"ort~" ALIAS=~"ort_a~" )  TABLE(NAME=~"ortsteil~" )  TABLE(NAME=~"adresse~" ALIAS=~"adresse_b~" )  TABLE(NAME=~"betrieb~" ALIAS=~"betrieb_b~" )  TABLE(NAME=~"en_bereich~" )  TABLE(NAME=~"en_tankschutz~" )  TABLE(NAME=~"ort~" ALIAS=~"ort_b~" ) COLUMN(NAME=~"angebot.angebot~") COLUMN(NAME=~"angebot.nummer~") COLUMN(NAME=~"angebot.leistungsort~") COLUMN(NAME=~"angebot.ansprechpartner~") COLUMN(NAME=~"angebot.anfrage_datum~") COLUMN(NAME=~"angebot.anfrage_nr~") COLUMN(NAME=~"angebot.druck_datum~") COLUMN(NAME=~"angebot.en_objekt~") COLUMN(NAME=~"angebot.en_bereich~") COLUMN(NAME=~"angebot_pos.angebot_pos~") COLUMN(NAME=~"angebot_pos.einheit~") COLUMN(NAME=~"angebot_pos.typ~") COLUMN(NAME=~"angebot_pos.menge~") COLUMN(NAME=~"angebot_pos.angebot_preis~") COLUMN(NAME=~"angebot_pos.nummer~") COLUMN(NAME=~"angebot_pos.option_alternativ~") COLUMN(NAME=~"angebot_pos.mwst_prozent~") COLUMN(NAME=~"angebot_pos.verbund_pos~") COLUMN(NAME=~"angebot_pos.verbund_kz~") COLUMN(NAME=~"angebot_pos.einheit_alternativ~") COLUMN(NAME=~"angebot_pos.bild_drucken~") COLUMN(NAME=~"angebot_pos.postext_ueberschr~") COLUMN(NAME=~"angebot_pos.postext_angebot~") COLUMN(NAME=~"leistungsort.name~") COLUMN(NAME=~"betrieb_b.name~") COLUMN(NAME=~"betrieb_b.name2~") COLUMN(NAME=~"adresse_b.strasse~") COLUMN(NAME=~"adresse_b.hausnummer~") COLUMN(NAME=~"adresse_b.plz~") COLUMN(NAME=~"ort_b.bezeichnung~") COLUMN(NAME=~"betrieb_a.betrieb~") COLUMN(NAME=~"betrieb_a.nummer~") COLUMN(NAME=~"en_tankschutz.nummer~") COMPUTE(NAME=~"( SELECT anrede.bezeichnung FROM sf_anwender, anrede WHERE sf_anwender.sf_anwender =angebot.sachbearbeiter AND sf_anwender.anrede = anrede.anrede ) as sachbearbeiter_anrede~") COMPUTE(NAME=~"( SELECT sf_anwender.nachname FROM sf_anwender WHERE sf_anwender.sf_anwender = angebot.sachbearbeiter ) as sachbearbeiter_nachname~") COMPUTE(NAME=~"( SELECT sf_anwender.vorname FROM sf_anwender WHERE sf_anwender.sf_anwender = angebot.sachbearbeiter ) as sachbearbeiter_vorname~") COMPUTE(NAME=~"( SELECT v_telekommunikation_predefmit.telefon FROM sf_users, v_telekommunikation_predefmit WHERE v_telekommunikation_predefmit.mitarbeiter = sf_users.mitarbeiter AND sf_users.sf_anwender = angebot.sachbearbeiter ) telefon~") COMPUTE(NAME=~"( SELECT v_telekommunikation_predefmit.fax FROM sf_users, v_telekommunikation_predefmit WHERE v_telekommunikation_predefmit.mitarbeiter = sf_users.mitarbeiter AND sf_users.sf_anwender = angebot.sachbearbeiter ) fax~") COLUMN(NAME=~"betrieb_a.name~") COLUMN(NAME=~"betrieb_a.name2~") COLUMN(NAME=~"adresse_a.plz~") COLUMN(NAME=~"adresse_a.hausnummer~") COLUMN(NAME=~"adresse_a.strasse~") COLUMN(NAME=~"ort_a.bezeichnung~") COLUMN(NAME=~"ortsteil.bezeichnung~") COMPUTE(NAME=~"(SELECT beschreibung from leistung where leistung.leistung = angebot_pos.leistung) beschreibung~") COLUMN(NAME=~"angebot.kopftext_p~") COLUMN(NAME=~"angebot.fusstext_p~") COMPUTE(NAME=~"(SELECT kuerzel FROM einheit WHERE einheit.einheit = angebot_pos.einheit) kuerzel~") COLUMN(NAME=~"angebot_pos.pauschal_pos~") COLUMN(NAME=~"angebot_pos.rabatt~") COLUMN(NAME=~"angebot_pos.preis~") COLUMN(NAME=~"angebot_pos.rabatt_betrag~") COLUMN(NAME=~"angebot_pos.positionstext~") COLUMN(NAME=~"angebot_pos.lfd_nr_ebene~") COLUMN(NAME=~"angebot_pos.positionstext_rtf~") COLUMN(NAME=~"angebot.kopftext~") COLUMN(NAME=~"angebot.fusstext~") COLUMN(NAME=~"angebot.kopftext_rtf~") COLUMN(NAME=~"angebot.fusstext_rtf~") COLUMN(NAME=~"angebot.titel~") COLUMN(NAME=~"angebot.titel_rtf~") COMPUTE(NAME=~"(SELECT infotext from leistung where leistung.leistung = angebot_pos.leistung) infotext~") COMPUTE(NAME=~"(SELECT infotext_rtf from leistung where leistung.leistung = angebot_pos.leistung) infotext_rtf~") COLUMN(NAME=~"angebot_pos.infotext_drucken~") COLUMN(NAME=~"angebot.gesamtpreis~") COLUMN(NAME=~"angebot.mwst_betrag1~") COLUMN(NAME=~"angebot.mwst_betrag2~") COLUMN(NAME=~"angebot.mwst_betrag3~") COLUMN(NAME=~"angebot.mwst_betrag4~") COLUMN(NAME=~"angebot.mwst_betrag5~") COLUMN(NAME=~"angebot.mwst_prozent1~") COLUMN(NAME=~"angebot.mwst_prozent2~") COLUMN(NAME=~"angebot.mwst_prozent3~") COLUMN(NAME=~"angebot.mwst_prozent4~") COLUMN(NAME=~"angebot.mwst_prozent5~") COLUMN(NAME=~"angebot.netto_betrag~") COLUMN(NAME=~"angebot.brutto_betrag~") COLUMN(NAME=~"angebot.rabatt_betrag~") COLUMN(NAME=~"angebot.waehrung~") COLUMN(NAME=~"angebot_pos.leistung~") COMPUTE(NAME=~"(Select nullwerte.nvarchar254 from nullwerte) b_image_1~") COMPUTE(NAME=~"(select bild_name from leistung where leistung.leistung = angebot_pos.leistung) bild_name~") COLUMN(NAME=~"adresse_b.pplz~") COLUMN(NAME=~"adresse_b.postfach~")    JOIN (LEFT=~"angebot.leistungsort~"    OP =~"=~"RIGHT=~"leistungsort.leistungsort~"    OUTER1 =~"angebot.leistungsort~" )    JOIN (LEFT=~"leistungsort.leistungsort~"    OP =~"=~"RIGHT=~"adresse_a.leistungsort~"    OUTER1 =~"leistungsort.leistungsort~" )    JOIN (LEFT=~"adresse_a.ort~"    OP =~"=~"RIGHT=~"ort_a.ort~"    OUTER1 =~"adresse_a.ort~" )    JOIN (LEFT=~"adresse_a.ortsteil~"    OP =~"=~"RIGHT=~"ortsteil.ortsteil~"    OUTER1 =~"adresse_a.ortsteil~" )    JOIN (LEFT=~"angebot.en_bereich~"    OP =~"=~"RIGHT=~"en_bereich.en_bereich~"    OUTER1 =~"angebot.en_bereich~" )    JOIN (LEFT=~"angebot.en_objekt~"    OP =~"=~"RIGHT=~"en_tankschutz.en_objekt~"    OUTER1 =~"angebot.en_objekt~" )    JOIN (LEFT=~"angebot.angebot~"    OP =~"=~"RIGHT=~"angebot_pos.angebot~" )    JOIN (LEFT=~"angebot.kunde~"    OP =~"=~"RIGHT=~"betrieb_a.betrieb~" )    JOIN (LEFT=~"angebot.mandant~"    OP =~"=~"RIGHT=~"betrieb_b.betrieb~" )    JOIN (LEFT=~"betrieb_b.betrieb~"    OP =~"=~"RIGHT=~"adresse_b.betrieb~" )    JOIN (LEFT=~"adresse_b.ort~"    OP =~"=~"RIGHT=~"ort_b.ort~" )WHERE(    EXP1 =~"angebot.angebot~"   OP =~"=~"    EXP2 =~":id~" ) ) ARG(NAME = ~"id~" TYPE = number) " arguments=(("id", number))  sort="angebot_angebot A angebot_pos_lfd_nr_ebene A angebot_pos_nummer A " )
+data( 10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10525, 3,"L", 1.0000, 50.000,"1", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Entsorgungsleistung","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","St","0",null  10063, 0,null  1,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 2075,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10526, 19,"L", 1.0000, 25.600,"2", 0, 19.0,"0","0",null "N","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "CO 2- Strahlen/JOS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","h","0",null  11448, 0,null  2,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "N", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 10069,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10527, 13,"B", 1.0000, 13.000,"3", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "10 cbm Abrollcontainer
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Monate","0",null  11494, 0,null  3,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 10033,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10528, 1,"S", 1.0000, 36.300,"4", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Bauschutt","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","t","0",null  11879, 0,null  4,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+","    123","{~\rtf1~\ansi~\ansicpg1252~\uc1~\deff0{~\fonttbl {~\f0~\fswiss~\fcharset0~\fprq2 Arial;} {~\f1~\froman~\fcharset2~\fprq2 Symbol;}} {~\colortbl;~\red0~\green0~\blue255;~\red225~\green234~\blue253;} {~\stylesheet{~\s0~\itap0~\nowidctlpar~\f0~\fs24 [Normal];}{~\*~\cs10~\additive Default Paragraph Font;}} {~\*~\generator TX_RTF32 13.0.501.501;} ~\deftab1134~\paperw11905~\paperh16838~\margl0~\margt0~\margr0~\margb0~\widowctrl {~\*~\background{~\shp{~\*~\shpinst~\shpleft0~\shptop0~\shpright0~\shpbottom0~\shpfhdr0~\shpbxmargin~\shpbxignore~\shpbymargin~\shpbyignore~\shpwr0~\shpwrk0~\shpfblwtxt1~\shplid1025{~\sp{~\sn shapeType}{~\sv 1}}{~\sp{~\sn fFlipH}{~\sv 0}}{~\sp{~\sn fFlipV}{~\sv 0}}{~\sp{~\sn fillColor}{~\sv 16640737}}{~\sp{~\sn fFilled}{~\sv 1}}{~\sp{~\sn lineWidth}{~\sv 0}}{~\sp{~\sn fLine}{~\sv 0}}{~\sp{~\sn fBackground}{~\sv 1}}{~\sp{~\sn fLayoutInCell}{~\sv 1}}}}}~\pard~\itap0~\nowidctlpar~\plain~\f0~\fs20 123}","J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 11864,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10529, 10014,"L", 1.0000, 62.000,"5", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Frachtanteil","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","j.Trsp.","0",null  11382, 0,null  5,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 2076,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10530, 3,"L", 1.0000, 64.750,"6", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Minimelder mit Relais","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","St","0",null  11469, 0,null  6,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 10091,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10531, 13,"B", 1.0000, 55.000,"7", 0, 0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Container","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Monate","0",null  11510, 0,null  7,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 2136,null null null null  10088,"2010109", 10345,null 2018-03-20 00:00:00:000000,null null null  7, 10532, 31,"S", 1.0000, 25.400,"8", 0, 19.0,"0","0",null "J","N","J",null "Leda Transport GmbH","Leda2","Reimersstr.","41b","26789","Leer", 10193,"10004",null "Herr","Administrator",null "1 2","1 3","Mustermann","Max","26789","41b","Reimersstr.","Leer",null "Aushub","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","m³","0",null  11654, 0,null  8,null "Test1
+Test2
+Test3
+Test4
+Test5","asdfasdfas
+sdefasdfsdf
+asdafasdfasd
+
+AÖSKDMJlanksdAS","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}{~\f2 ~\fswiss ~\fcharset0 Arial;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f2~\fs24 Test1~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test2~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test3~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test4~\plain~\f0~\fs24~\par 
+~\plain~\f2~\fs24 Test5}
+","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fswiss ~\fcharset0 Arial;}{~\f2 ~\fswiss ~\fcharset0 Calisto MT;}{~\f3 ~\fswiss ~\fcharset0 Consolas;}{~\f4 ~\fswiss ~\fcharset0 Franklin Gothic Book;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24 asdfasdfas~\plain~\f1~\fs20~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\cf2~\fs20~\par 
+sd~\plain~\f2~\fs20~\lang1031~\hich~\f2~\dbch~\f2~\loch~\f2~\cf2~\fs20 efasdfsdf~\par 
+~\plain~\f1~\fs24 as~\plain~\f1~\fs22~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs22~\b dafasdfasd~\plain~\f1~\fs24~\par 
+~\par 
+~\plain~\f4~\fs24~\lang1031~\hich~\f4~\dbch~\f4~\loch~\f4~\fs24~\i A~\'d6SKDMJlanksdAS}
+","Angebot - Bauvorhaben xxxxxx, XxüxX
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten","{~\rtf1~\sstecf24000~\ansi~\deflang1031~\ftnbj~\uc1~\deff0 
+{~\fonttbl{~\f0 ~\fswiss Arial;}{~\f1 ~\fnil ~\fcharset0 Arial-BoldMT;}}
+{~\colortbl ;~\red255~\green255~\blue255 ;~\red0~\green0~\blue0 ;}
+{~\stylesheet{~\f0~\fs24 Normal;}{~\cs1 Default Paragraph Font;}}
+{~\*~\revtbl{Unknown;}}
+~\paperw12240~\paperh15840~\margl0~\margr0~\margt0~\margb0~\headery720~\footery720~\nogrowautofit~\deftab720~\formshade~\nofeaturethrottle1~\dntblnsbdb~\fet4~\aendnotes~\aftnnrlc~\pgbrdrhead~\pgbrdrfoot 
+~\sectd~\pgwsxn6270~\pghsxn16838~\guttersxn0~\marglsxn0~\margrsxn0~\margtsxn0~\margbsxn0~\headery720~\footery720~\sbkpage~\pgncont~\pgndec 
+~\plain~\plain~\f0~\fs24~\ql~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b Angebot - Bauvorhaben xxxxxx, Xx~\plain~\f1~\fs25~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs25~\b~\u252 ~\'fc~\plain~\f1~\fs24~\lang1031~\hich~\f1~\dbch~\f1~\loch~\f1~\fs24~\b xX~\par 
+Kanalreinigungs- und Kanal-TV-Untersuchungsarbeiten}
+",null null "J", 26.000, 52.640,null null null null  19.0,null null null null  332.050, 384.690, 0, 7, 11865,null null null null ) 
+group(level=1 header.height=0 header.height.autosize=yes trailer.height=0 by=("angebot_pos_angebot_pos" ) header.color="536870912" header.transparency="0" header.gradient.color="8421504" header.gradient.transparency="0" header.gradient.angle="0" header.brushmode="0" header.gradient.repetition.mode="0" header.gradient.repetition.count="0" header.gradient.repetition.length="100" header.gradient.focus="0" header.gradient.scale="100" header.gradient.spread="100" trailer.color="536870912" trailer.transparency="0" trailer.gradient.color="8421504" trailer.gradient.transparency="0" trailer.gradient.angle="0" trailer.brushmode="0" trailer.gradient.repetition.mode="0" trailer.gradient.repetition.count="0" trailer.gradient.repetition.length="100" trailer.gradient.focus="0" trailer.gradient.scale="100" trailer.gradient.spread="100" )
+compute(band=header alignment="0" expression="IF ( getRow () = rowCount() AND angebot_pos_typ = 'T' AND count ( angebot_pos_nummer for group 1 ) <> 1, 0, 1 )"border="0" color="0" x="105" y="52" height="423" width="661" format="[GENERAL]" html.valueishtml="0"  name=c_header_visible visible="0"  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="0" text="Pos." border="0" color="0" x="952" y="79" height="423" width="1005" html.valueishtml="0"  name=t_pos visible="1~tc_header_visible"  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="0" text="Bezeichung" border="0" color="0" x="2037" y="79" height="423" width="2275" html.valueishtml="0"  name=t_bezeichnung visible="1~tc_header_visible"  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+text(band=header alignment="1" text="E-Preis" border="0" color="0" x="16139" y="79" height="423" width="2196" html.valueishtml="0"  name=t_einzelpreis visible="1~tc_header_visible"  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=header alignment="0" expression="rowcount()"border="0" color="0" x="1243" y="714" height="343" width="1058" format="[GENERAL]" html.valueishtml="0"  name=c_rowcount visible="0"  font.face="MS Sans Serif" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=header alignment="0" expression="angebot_pos_leistung"border="0" color="0" x="2513" y="740" height="343" width="1058" format="[GENERAL]" html.valueishtml="0"  name=c_b_image_id visible="0"  font.face="MS Sans Serif" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=header alignment="0" expression="bild_name"border="0" color="0" x="3889" y="767" height="343" width="1058" format="[GENERAL]" html.valueishtml="0"  name=c_b_image_filename visible="0"  font.face="MS Sans Serif" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=header alignment="0" text="Einh." border="0" color="0" x="14525" y="79" height="423" width="1270" html.valueishtml="0"  name=t_menge_einh visible="1~tc_header_visible"  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=header.1 alignment="0" expression="if(angebot_pos_option_alternativ = 1, 'optional:','') + if( angebot_pos_option_alternativ =2, 'alternativ:','')"border="0" color="0" x="1931" y="53" height="26" width="4630" format="[GENERAL]" html.valueishtml="0"  name=c_optional_alternativ visible="1"  slideup=directlyabove  font.face="Arial" font.height="-10" font.weight="700"  font.family="2" font.pitch="2" font.charset="0" font.underline="1" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+compute(band=detail alignment="0" expression="(angebot_pos_angebot_preis* angebot_pos_menge) -(angebot_pos_angebot_preis*angebot_pos_menge*angebot_pos_rabatt/100)"border="0" color="0" x="105" y="26" height="423" width="740" format="[general]" html.valueishtml="0"  name=c_pos_gesamtpreis_rabatt visible="0"  slideup=directlyabove  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+compute(band=detail alignment="0" expression="(angebot_pos_angebot_preis* angebot_pos_menge)"border="0" color="0" x="105" y="476" height="370" width="740" format="[General]" html.valueishtml="0"  name=c_pos_gesamtpreis visible="0"  slideup=directlyabove  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="255" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+text(band=detail alignment="0" text="" border="0" color="33554432" x="1005" y="159" height="423" width="17277" html.valueishtml="0"  name=t_dummy visible="1"  slideup=directlyabove  font.face="Tahoma" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=15 alignment="0" tabsequence=32766 border="0" color="0" x="952" y="26" height="26" width="978" format="[general]" html.valueishtml="0"  name=angebot_pos_nummer visible="1"  slideup=allabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+text(band=detail alignment="0" text="/" border="0" color="0" x="14340" y="26" height="26" width="105" html.valueishtml="0"  name=t_1 visible="1~tif(angebot_pos_typ='T' or angebot_pos_typ ='Z',0,1)"  slideup=allabove  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+column(band=detail id=13 alignment="1" tabsequence=32766 border="0" color="0" x="13096" y="26" height="26" width="1137" format="#,##0.00" html.valueishtml="0"  name=angebot_pos_menge visible="1~tif(kuerzel='PAUSCHAL',0,1)"  slideup=allabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=detail alignment="0" expression="if(kuerzel = 'PAUSCHAL', 'je','') "border="0" color="0" x="13096" y="26" height="26" width="1137" format="[GENERAL]" html.valueishtml="0"  name=c_pauschal visible="1~tif(kuerzel='PAUSCHAL',1,0)"  slideup=allabove  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+column(band=detail id=63 alignment="0" tabsequence=32766 border="0" color="0" x="11033" y="899" height="26" width="7223" format="[general]" html.valueishtml="0"  name=infotext visible="1~tif(left( infotext_rtf , 5) =~"{\rtf~" ,0, if ( angebot_pos_infotext_drucken ='J', 1, 0 ))"  slideup=allabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=64 alignment="0" tabsequence=32766 border="0" color="0" x="11033" y="899" height="26" width="7223" format="[general]" html.valueishtml="0"  name=infotext_rtf visible="1~tif(angebot_pos_infotext_drucken ='J',1,0)"  slideup=allabove height.autosize=yes richedit.limit=0 richedit.focusrectangle=no richedit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=82 alignment="0" tabsequence=32766 border="0" color="0" x="2037" y="899" height="3122" width="5582" format="[general]" html.valueishtml="0"  name=b_image  tag="Blobtable=leistung;blobcol=bild;BlobKey=leistung;KeyCol=angebot_pos_leistung;Blobfilename=bild_name" visible="1~tif ( len (  b_image ) > 0, if ( angebot_pos_bild_drucken = 'N', 0, 1 ), 0 )"  slideup=allabove bitmapname=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+compute(band=detail alignment="0" expression="if(isNull(angebot_pos_rabatt),'', 'inkl. ' + angebot_pos_rabatt + ' % Rabatt')"border="0" color="0" x="2037" y="794" height="26" width="16245" format="[GENERAL]" html.valueishtml="0"  name=c_rabatt visible="1"  slideup=allabove  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0"  height.autosize=yes)
+column(band=detail id=46 alignment="0" tabsequence=32766 border="0" color="0" x="2037" y="26" height="26" width="8863" format="[general]" html.valueishtml="0"  name=beschreibung visible="1~tif( angebot_pos_postext_angebot = 'J' and angebot_pos_postext_ueberschr ='J',0,1)"  slideup=directlyabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=56 alignment="0" tabsequence=32766 border="0" color="0" x="2037" y="26" height="26" width="8863" format="[general]" html.valueishtml="0"  name=angebot_pos_positionstext_rtf_1 visible="1~tif( angebot_pos_postext_angebot = 'J' and angebot_pos_postext_ueberschr ='J',1, 0)" height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=54 alignment="0" tabsequence=32766 border="0" color="0" x="2037" y="688" height="26" width="16245" format="[general]" html.valueishtml="0"  name=angebot_pos_positionstext visible="1~tif (left( angebot_pos_positionstext_rtf , 5) =~"{\rtf~",0, if( ( angebot_pos_postext_angebot = 'J' AND angebot_pos_postext_ueberschr ='N' ) or angebot_pos_typ= 'T',1,0))"  slideup=allabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=56 alignment="0" tabsequence=32766 border="0" color="0" x="2037" y="688" height="26" width="16245" format="[general]" html.valueishtml="0"  name=angebot_pos_positionstext_rtf visible="1~tif (left( angebot_pos_positionstext_rtf , 5) =~"{\rtf~", if( ( angebot_pos_postext_angebot = 'J' AND angebot_pos_postext_ueberschr ='N' ) or angebot_pos_typ= 'T',1,0),0)"  slideup=allabove height.autosize=yes richedit.limit=0 richedit.focusrectangle=no richedit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=14 alignment="1" tabsequence=32766 border="0" color="0" x="16139" y="26" height="26" width="2196" format="#,##0.00" html.valueishtml="0"  name=angebot_pos_angebot_preis visible="1~tif(angebot_pos_typ ='Z',0,1)"  slideup=allabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+column(band=detail id=49 alignment="0" tabsequence=32766 border="0" color="0" x="14525" y="26" height="26" width="1481" format="[general]" html.valueishtml="0"  name=kuerzel visible="1"  slideup=directlyabove height.autosize=yes edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=no  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" background.transparency="0" background.gradient.color="8421504" background.gradient.transparency="0" background.gradient.angle="0" background.brushmode="0" background.gradient.repetition.mode="0" background.gradient.repetition.count="0" background.gradient.repetition.length="100" background.gradient.focus="0" background.gradient.scale="100" background.gradient.spread="100" tooltip.backcolor="134217752" tooltip.delay.initial="0" tooltip.delay.visible="32000" tooltip.enabled="0" tooltip.hasclosebutton="0" tooltip.icon="0" tooltip.isbubble="0" tooltip.maxwidth="0" tooltip.textcolor="134217751" tooltip.transparency="0" transparency="0" )
+htmltable(border="1" )
+htmlgen(clientevents="1" clientvalidation="1" clientcomputedfields="1" clientformatting="0" clientscriptable="0" generatejavascript="1" encodeselflinkargs="1" netscapelayers="0" pagingmethod=0 generatedddwframes="1" )
+xhtmlgen() cssgen(sessionspecific="0" )
+xmlgen(inline="0" )
+xsltgen()
+jsgen()
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()
+export.pdf(method=0 distill.custompostscript="0" xslfop.print="0" nativepdf.customsize=0 nativepdf.customorientation=0 nativepdf.pdfstandard=0 nativepdf.useprintspec=no )
+export.xhtml()
+ 

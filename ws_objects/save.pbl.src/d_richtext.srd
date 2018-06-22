@@ -1,0 +1,92 @@
+﻿$PBExportHeader$d_richtext.srd
+release 17;
+datawindow(units=2 timer_interval=0 color=1073741824 processing=7 print.printername ="" print.documentname="" print.orientation = 0 print.margin.left = 250 print.margin.right = 250 print.margin.top = 250 print.margin.bottom = 250 print.paper.source = 0 print.paper.size = 0 print.canusedefaultprinter=yes print.prompt=no print.cliptext=no print.overrideprintjob=no print.collate=yes print.background=no print.preview.background=no print.preview.outline=yes richtext.headerfooter=yes richtext.wordwrap=no richtext.popmenu=yes richtext.pictureframe=no richtext.inputfieldnamesvisible=no richtext.inputfieldsvisible=yes richtext.tabsvisible=no richtext.returnsvisible=no richtext.spacesvisible=no richtext.inputfieldbackcolor=1073741824 richtext.backcolor=1073741824 richtext.tabbar=no richtext.rulerbar=no richtext.toolbar=no richtext.displayonly=no )
+detail(text="{\rtf1\sstecf24000\ansi\ansicpg1252\deflang2052\ftnbj\uc1\deff0 
+{\fonttbl{\f0 \fswiss \fcharset1 Arial;}{\f1 \fswiss \fcharset0 Arial;}{\f2 \fswiss \fcharset134 Arial;}}
+{\colortbl ;\red255\green255\blue255 ;\red0\green0\blue0 ;}
+{\stylesheet{\f0\fs24 Normal;}{\cs1 Default Paragraph Font;}}
+{\*\revtbl{Unknown;}}
+\paperw12240\paperh15840\margl0\margr0\margt0\margb0\headery720\footery720\nogrowautofit\deftab720\formshade\nofeaturethrottle1\dntblnsbdb\fet4\aendnotes\aftnnrlc\pgbrdrhead\pgbrdrfoot 
+\sectd\pgwsxn11905\pghsxn16838\guttersxn0\marglsxn0\margrsxn0\margtsxn0\margbsxn0\headery720\footery720\sbkpage\pgncont\pgndec 
+\plain\plain\f0\fs24\ql\plain\f1\fs24\loch Emp Id: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5000{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname EMP_ID}}}{\fldrslt\loch \{EMP_ID\}}}\plain\f1\fs24\par 
+\loch Manager Id: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5001{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname MANAGER_ID}}}{\fldrslt\loch \{MANAGER_ID\}}}\plain\f1\fs24\ql\par 
+\loch Emp Fname: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5002{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname EMP_FNAME}}}{\fldrslt\loch \{EMP_FNAME\}}}\plain\f1\fs24\ql\par 
+\loch Emp Lname: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5003{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname EMP_LNAME}}}{\fldrslt\loch \{EMP_LNAME\}}}\plain\f1\fs24\ql\par 
+\loch Dept Id: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5004{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname DEPT_ID}}}{\fldrslt\loch \{DEPT_ID\}}}\plain\f1\fs24\ql\par 
+\loch Street: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5005{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname STREET}}}{\fldrslt\loch \{STREET\}}}\plain\f1\fs24\ql\par 
+\loch City: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5006{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname CITY}}}{\fldrslt\loch \{CITY\}}}\plain\f1\fs24\ql\par 
+\loch State: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5007{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname STATE}}}{\fldrslt\loch \{STATE\}}}\plain\f1\fs24\ql\par 
+\loch Zip Code: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5008{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname ZIP_CODE}}}{\fldrslt\loch \{ZIP_CODE\}}}\plain\f1\fs24\ql\par 
+\loch Phone: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5009{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname PHONE}}}{\fldrslt\loch \{PHONE\}}}\plain\f1\fs24\ql\par 
+\loch Status: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5010{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname STATUS}}}{\fldrslt\loch \{STATUS\}}}\plain\f1\fs24\ql\par 
+\loch Ss Number: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5011{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname SS_NUMBER}}}{\fldrslt\loch \{SS_NUMBER\}}}\plain\f1\fs24\ql\par 
+\loch Salary: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5012{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname SALARY}}}{\fldrslt\loch \{SALARY\}}}\plain\f1\fs24\ql\par 
+\plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5013{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname START_DATE}}}{\fldrslt\loch \{START_DATE\}}}\plain\f1\fs24\ql\par 
+\loch Termination Date: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5014{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname TERMINATION_DATE}}}{\fldrslt\loch \{TERMINATION_DATE\}}}\plain\f1\fs24\ql\par 
+\loch Birth Date: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5015{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname BIRTH_DATE}}}{\fldrslt\loch \{BIRTH_DATE\}}}\plain\f1\fs24\loch Bene Health Ins: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5016{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname BENE_HEALTH_INS}}}{\fldrslt\loch \{BENE_HEALTH_INS\}}}\plain\f1\fs24\ql\par 
+\loch Bene Life Ins: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5017{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname BENE_LIFE_INS}}}{\fldrslt\loch \{BENE_LIFE_INS\}}}\plain\f1\fs24\ql\par 
+\loch Bene Day Care: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5018{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname BENE_DAY_CARE}}}{\fldrslt\loch \{BENE_DAY_CARE\}}}\plain\f1\fs24\ql\par 
+\loch Sex: \plain\f2\fs24\lang2052\hich\f2\dbch\f2\loch\f2\cf2\fs24\sscharaux5019{\field{\*\fldinst{FORMTEXT}{\*\formfield\fftype0{\*\ffname SEX}}}{\fldrslt\loch \{SEX\}}}\plain\f1\fs24\ql\par 
+\plain\f0\fs24}
+")
+header(text="{\rtf1\sstecf24000\ansi\ansicpg1252\deflang2052\ftnbj\uc1\deff0 
+{\fonttbl{\f0 \fswiss \fcharset1 Arial;}}
+{\colortbl ;\red255\green255\blue255 ;\red0\green0\blue0 ;}
+{\stylesheet{\f0\fs24 Normal;}{\cs1 Default Paragraph Font;}}
+{\*\revtbl{Unknown;}}
+\paperw12240\paperh15840\margl0\margr0\margt0\margb0\headery720\footery720\nogrowautofit\deftab720\formshade\nofeaturethrottle1\dntblnsbdb\fet4\aendnotes\aftnnrlc\pgbrdrhead\pgbrdrfoot 
+\sectd\pgwsxn11905\pghsxn16838\guttersxn0\marglsxn0\margrsxn0\margtsxn0\margbsxn0\headery720\footery720\sbkpage\pgncont\pgndec 
+\plain\plain\f0\fs24\ql}
+")
+footer(text="{\rtf1\sstecf24000\ansi\ansicpg1252\deflang2052\ftnbj\uc1\deff0 
+{\fonttbl{\f0 \fswiss \fcharset1 Arial;}}
+{\colortbl ;\red255\green255\blue255 ;\red0\green0\blue0 ;}
+{\stylesheet{\f0\fs24 Normal;}{\cs1 Default Paragraph Font;}}
+{\*\revtbl{Unknown;}}
+\paperw12240\paperh15840\margl0\margr0\margt0\margb0\headery720\footery720\nogrowautofit\deftab720\formshade\nofeaturethrottle1\dntblnsbdb\fet4\aendnotes\aftnnrlc\pgbrdrhead\pgbrdrfoot 
+\sectd\pgwsxn11905\pghsxn16838\guttersxn0\marglsxn0\margrsxn0\margtsxn0\margbsxn0\headery720\footery720\sbkpage\pgncont\pgndec 
+\plain\plain\f0\fs24\ql}
+")table(column=(type=long update=yes updatewhereclause=yes key=yes name=emp_id dbname="employee.emp_id" )
+ column=(type=long update=yes updatewhereclause=yes name=manager_id dbname="employee.manager_id" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=emp_fname dbname="employee.emp_fname" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=emp_lname dbname="employee.emp_lname" )
+ column=(type=long update=yes updatewhereclause=yes name=dept_id dbname="employee.dept_id" )
+ column=(type=char(40) update=yes updatewhereclause=yes name=street dbname="employee.street" )
+ column=(type=char(20) update=yes updatewhereclause=yes name=city dbname="employee.city" )
+ column=(type=char(4) update=yes updatewhereclause=yes name=state dbname="employee.state" )
+ column=(type=char(9) update=yes updatewhereclause=yes name=zip_code dbname="employee.zip_code" )
+ column=(type=char(10) update=yes updatewhereclause=yes name=phone dbname="employee.phone" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=status dbname="employee.status" )
+ column=(type=char(11) update=yes updatewhereclause=yes name=ss_number dbname="employee.ss_number" )
+ column=(type=decimal(3) update=yes updatewhereclause=yes name=salary dbname="employee.salary" )
+ column=(type=date update=yes updatewhereclause=yes name=start_date dbname="employee.start_date" )
+ column=(type=date update=yes updatewhereclause=yes name=termination_date dbname="employee.termination_date" )
+ column=(type=date update=yes updatewhereclause=yes name=birth_date dbname="employee.birth_date" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=bene_health_ins dbname="employee.bene_health_ins" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=bene_life_ins dbname="employee.bene_life_ins" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=bene_day_care dbname="employee.bene_day_care" )
+ column=(type=char(1) update=yes updatewhereclause=yes name=sex dbname="employee.sex" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"employee~" ) COLUMN(NAME=~"employee.emp_id~") COLUMN(NAME=~"employee.manager_id~") COLUMN(NAME=~"employee.emp_fname~") COLUMN(NAME=~"employee.emp_lname~") COLUMN(NAME=~"employee.dept_id~") COLUMN(NAME=~"employee.street~") COLUMN(NAME=~"employee.city~") COLUMN(NAME=~"employee.state~") COLUMN(NAME=~"employee.zip_code~") COLUMN(NAME=~"employee.phone~") COLUMN(NAME=~"employee.status~") COLUMN(NAME=~"employee.ss_number~") COLUMN(NAME=~"employee.salary~") COLUMN(NAME=~"employee.start_date~") COLUMN(NAME=~"employee.termination_date~") COLUMN(NAME=~"employee.birth_date~") COLUMN(NAME=~"employee.bene_health_ins~") COLUMN(NAME=~"employee.bene_life_ins~") COLUMN(NAME=~"employee.bene_day_care~") COLUMN(NAME=~"employee.sex~")) " update="employee" updatewhere=1 updatekeyinplace=no )
+column(name=emp_id id=1 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=manager_id id=2 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=emp_fname id=3 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=emp_lname id=4 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=dept_id id=5 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=street id=6 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=city id=7 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=state id=8 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=zip_code id=9 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=phone id=10 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=status id=11 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=ss_number id=12 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=salary id=13 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=start_date id=14 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=termination_date id=15 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=birth_date id=16 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=bene_health_ins id=17 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=bene_life_ins id=18 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=bene_day_care id=19 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+column(name=sex id=20 visible="1" lineremove=no multiline=no width.autosize=yes width="0" alignment="0" tabsequence=1 format="[general]" )
+htmltable(border="1" cellpadding="0" cellspacing="0" generatecss="no" nowrap="yes")
+export.xml(headgroups="1" includewhitespace="0" metadatatype=0 savemetadata=0 )
+import.xml()

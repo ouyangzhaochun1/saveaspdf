@@ -1,0 +1,35 @@
+﻿$PBExportHeader$p_save_exe.srj
+$PBExportComments$Generated Application Executable Project
+EXE:save.exe,,0,0,1
+CMP:0,0,0,2,0,0,1
+COM:Appeon
+DES:Appeon Product File
+CPY:
+PRD:PowerBuilder Enterprise Series
+PVS:1.0.0.1
+PVN:1,0,0,1
+FVS:1.0.0.1
+FVN:1,0,0,1
+MAN:0,asInvoker,0
+PBD:save.pbl,,1
+PBD:qa_frame.pbl,,1
+PBD:appeon_workarounds.pbl,,1
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,appeonextfuncs,u
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\qa_frame.pbl,w_show_detail,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,uo_printspecifications,u
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,w_newfeature,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,appeonservice,u
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,str_data,s
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\qa_frame.pbl,m_frame,m
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,nvo_restclient,u
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,w_saveaspdf,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,u_getfont,u
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,appeongetclientip,f
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,appeongetclienttype,f
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,str_a,s
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,str_b,s
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\qa_frame.pbl,w_base_manu,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\save.pbl,save,a
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\qa_frame.pbl,w_mdi,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\qa_frame.pbl,w_base,w
+OBJ:C:\Users\appeon\Desktop\SaveasPDF\appeon_workarounds.pbl,eon_appeon_resize,u

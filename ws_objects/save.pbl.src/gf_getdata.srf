@@ -1,0 +1,156 @@
+﻿$PBExportHeader$gf_getdata.srf
+global type gf_getdata from function_object
+end type
+
+forward prototypes
+global function string gf_getdata (powerobject apo, long al_count)
+end prototypes
+
+global function string gf_getdata (powerobject apo, long al_count);datastore lds_tmp
+datawindow ldw_tmp
+datawindowchild ldwc_tmp
+jsongenerator ljs_gen
+string ls_json,ls_key,ls_type,ls_tmp
+string ls_pos1,ls_pos2
+long ll_array,ll_object
+long ll_loop1,ll_column,ll_begin,ll_end
+long ll_loop2
+long ll_len
+string ls_data
+
+
+ljs_gen = create jsongenerator
+ll_array = ljs_gen.createjsonarray( )
+if not isvalid(apo) then
+         return ""
+end if
+
+choose case apo.typeof()
+         case datawindow!
+                   ldw_tmp = apo
+                   ll_column = long(ldw_tmp.describe("datawindow.column.count"))
+                  for ll_loop1 = 1 to al_count 
+                            //构建json数据
+                            ll_object = ljs_gen.additemobject(ll_array)
+                            for ll_loop2=1 to ll_column
+                                     //根据列数添加数据
+                                     ls_key = ldw_tmp.describe( "#"+string(ll_loop2)+".name")
+                                     ls_type = ldw_tmp.describe( "#"+string(ll_loop2)+".coltype")
+                                     choose case left(trim(ls_type),3)
+                                               case "str","cha","var"
+                                                        //添加字符串数据
+//												  ll_begin = pos(ls_type,"(")+1
+//												  ll_end = pos(ls_type,")")
+//												  ll_len = long(mid(ls_type,ll_begin,ll_end - ll_begin))
+//												  if ll_len > 0 then
+//													ls_tmp = fill("*",ll_len - 5)
+//												  else
+//													ls_tmp = ""
+//												  end if
+//												  ls_tmp = "test"+ls_tmp
+//                                                        ljs_gen.additemstring( ll_object,ls_key, ls_tmp)
+													 ljs_gen.additemstring( ll_object,ls_key, "test"+string(ll_loop1))
+                                               case "tim"
+                                                        ljs_gen.additemtime( ll_object,ls_key, time("12:23:24"))
+                                               case "dec","num","lon","ulo","rea","int","uin"
+                                                        ljs_gen.additemnumber( ll_object,ls_key, 12.678*ll_loop1)
+                                               case "dat"
+                                                        if len(ls_type) = 4 then
+                                                                 //date型数据
+                                                                 ljs_gen.additemdate( ll_object, ls_key, relativedate(1998-02-04,ll_loop1))
+                                                        else
+                                                                 //datetime
+                                                                 if mod(ll_loop1,2) = 0 then
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), true)
+                                                                 else
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), false)
+                                                                 end if
+                                                        end if
+                                               case else
+                                                        messagebox("未处理类型",ls_type)
+                                                        exit
+                                     end choose
+                            next
+                   next
+         case datastore!
+                   lds_tmp = apo
+                   ll_column = long(lds_tmp.describe("datawindow.column.count"))
+                   for ll_loop1 = 1 to al_count 
+                            //构建json数据
+                            ll_object = ljs_gen.additemobject(ll_array)
+                            for ll_loop2=1 to ll_column
+                                     //根据列数添加数据
+                                     ls_key = lds_tmp.describe( "#"+string(ll_loop2)+".name")
+                                     ls_type = lds_tmp.describe( "#"+string(ll_loop2)+".coltype")
+                                     choose case left(trim(ls_type),3)
+                                               case "str","cha","var"
+                                                        //添加字符串数据
+                                                        ljs_gen.additemstring( ll_object,ls_key, "test"+string(ll_loop1))
+                                               case "tim"
+                                                        ljs_gen.additemtime( ll_object,ls_key, time("12:23:24"))
+                                               case "dec","num","lon","ulo","rea","int","uin"
+                                                        ljs_gen.additemnumber( ll_object,ls_key, 12.678*ll_loop1)
+                                               case "dat"
+                                                        if len(ls_type) = 4 then
+                                                                 //date型数据
+                                                                 ljs_gen.additemdate( ll_object, ls_key, relativedate(1998-02-04,ll_loop1))
+                                                        else
+                                                                 //datetime
+                                                                 if mod(ll_loop1,2) = 0 then
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), true)
+                                                                 else
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), false)
+                                                                 end if
+                                                        end if
+                                               case else
+                                                        messagebox("未处理类型",ls_type)
+                                                        exit
+                                     end choose
+                            next
+                   next
+         case datawindowchild!
+                   ldwc_tmp = apo
+                   ll_column = long(ldwc_tmp.describe("datawindow.column.count"))
+                   for ll_loop1 = 1 to al_count
+                            //构建json数据
+                            ll_object = ljs_gen.additemobject(ll_array)
+                            for ll_loop2=1 to ll_column
+                                     //根据列数添加数据
+                                     ls_key = ldwc_tmp.describe( "#"+string(ll_loop2)+".name")
+                                     ls_type = ldwc_tmp.describe( "#"+string(ll_loop2)+".coltype")
+                                     choose case left(trim(ls_type),3)
+                                               case "str","cha","var"
+                                                        //添加字符串数据
+                                                        ljs_gen.additemstring( ll_object,ls_key, "test"+string(ll_loop1))
+                                               case "tim"
+                                                        ljs_gen.additemtime( ll_object,ls_key, time("12:23:24"))
+                                               case "dec","num","lon","ulo","rea","int","uin"
+                                                        ljs_gen.additemnumber( ll_object,ls_key, 12.678*ll_loop1)
+                                               case "dat"
+                                                        if len(ls_type) = 4 then
+                                                                 //date型数据
+                                                                 ljs_gen.additemdate( ll_object, ls_key, relativedate(1998-02-04,ll_loop1))
+                                                        else
+                                                                 //datetime
+                                                                 if mod(ll_loop1,2) = 0 then
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), true)
+                                                                 else
+                                                                           ljs_gen.additemdatetime( ll_object, ls_key,datetime(relativedate(2000-04-12,ll_loop1),relativetime(12:23:24,ll_loop1*10)), false)
+                                                                 end if
+                                                        end if
+                                               case else
+                                                        messagebox("未处理类型",ls_type)
+                                                        exit
+                                     end choose
+                            next
+                   next
+         case else
+                   ls_json = ""
+end choose
+
+ls_json = ljs_gen.getjsonstring( )
+//wf_output("ljs_gen.getjsonstring( )="+ls_json,false)
+return ls_json
+
+end function
+
